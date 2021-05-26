@@ -5,7 +5,7 @@ type: kubernetes
 
 steps:
 - name: frontend
-  image: node:6
+  image: node:12
   commands:
     - npm install
     - npm test
