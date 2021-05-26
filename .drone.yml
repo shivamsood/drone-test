@@ -1,24 +1,20 @@
-name: default
-
 kind: pipeline
 type: kubernetes
+name: en
 
 steps:
-- name: frontend
-  image: node:12
+- name: greeting
+  image: alpine
   commands:
-    - npm install
-    - npm test
+  - echo hello world
 
-- name: publish
-  image: plugins/docker
-  settings:
-    repo: octocat/hello-world
-    tags: [ 1, 1.1, latest ]
-    registry: index.docker.io
+---
+kind: pipeline
+type: kubernetes
+name: fr
 
-- name: notify
-  image: plugins/slack
-  settings:
-    channel: developers
-    username: drone
+steps:
+- name: greeting
+  image: alpine
+  commands:
+  - echo bonjour monde
