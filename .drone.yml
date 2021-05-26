@@ -4,13 +4,6 @@ kind: pipeline
 type: kubernetes
 
 steps:
-- name: backend
-  image: golang:latest
-  commands:
-    - go get
-    - go build
-    - go test
-
 - name: frontend
   image: node:6
   commands:
