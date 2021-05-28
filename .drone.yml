@@ -6,7 +6,7 @@ steps:
 - name: greeting
   image: alpine
   commands:
-  - echo hello world
+  - python
 
 ---
 kind: pipeline
