@@ -6,7 +6,7 @@ steps:
 - name: greeting
   image: alpine
   commands:
-  - cd shivam
+  - echo hello world
 
 ---
 kind: pipeline
