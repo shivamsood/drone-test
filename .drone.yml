@@ -1,16 +1,16 @@
 kind: pipeline
-type: kubernetes
+type: docker
 name: en
 
 steps:
 - name: greeting
   image: alpine
   commands:
-  - shivam
+  - echo hello world
 
 ---
 kind: pipeline
-type: kubernetes
+type: docker
 name: fr
 
 steps:
